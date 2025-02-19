@@ -178,5 +178,3 @@ document.addEventListener("DOMContentLoaded", function () {
   deleteButton.addEventListener("click", deleteSelectedRows);
   document.body.appendChild(deleteButton);
 });
-
-console.log("Hello");
