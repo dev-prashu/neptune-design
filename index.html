@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://db.onlinewebfonts.com/c/1c54c8d3ee1440608733f6afd6dbc1f4?family=Zin+Display"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Spline+Sans:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+     <div style="background-color: white;">
+      <div class="navbar">  
+        <div class="upper">
+          <div
+            class="neptune_logo"
+            style="padding-top: 30px; padding-left: 15px"
+          >
+            <img src="assests/logo.jpeg" alt="logo" />
+          </div>
+
+          <div class="profile">
+            <div class="username">
+              <div class="profile_pic">
+                <img src="assests/Group 79.jpg" alt="" />
+              </div>
+
+              <div class="namebox">
+                <div class="name">
+                  <h3>Jessica Thompson</h3>
+                </div>
+                <div class="role">
+                  <p>Primary User</p>
+                </div>
+              </div>
+              <div class="down_arrow">
+                <img src="assests/Shape.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="features">
+            <div class="home-feature">
+              <img src="assests/home 1.svg" alt="home" />
+              <p>Home</p>
+            </div>
+            <div class="document-feature">
+              <img src="assests/file-text 1.png" alt="document" />
+              <p>Documents</p>
+            </div>
+            <div class="chat-feature">
+              <img src="assests/message-circle 1.png" alt="chat" />
+              <p>Chat With Neptune</p>
+            </div>
+
+            <div class="help-feature">
+              <img src="assests/help-circle 1.png" alt="" />
+              <p>Help</p>
+            </div>
+            <div class="settings-feature">
+              <img src="assests/settings 1.png" alt="" />
+              <p>Settings</p>
+            </div>
+          </div>
+        </div>
+        <div class="lower">
+          <div class="phone_img">
+            <img src="assests/phone 1.png" alt="" />
+          </div>
+          <div class="phone-heading">
+            <h3>Having Trouble?</h3>
+            <p>
+              Feel free to contact us and we will always help you through the
+              process.
+            </p>
+          </div>
+
+          <div class="contact">
+            <button
+              style="
+                padding: 8px 20px;
+                border-radius: 5px;
+                background-color: #1f4451;
+                color: white;
+                height: 50px;
+                width: auto;
+                font-size: 16px;
+              "
+            >
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+     </div>
+      <div class="content">
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+          "
+        >
+          <div class="path">
+            <div class="homepath">
+              <p>Home</p>
+            </div>
+            <div class="right_arrow" style="padding-top: 2px">
+              <img src="assests/right-arrow.png" alt="right_arrow" />
+            </div>
+            <div class="subpath">
+              <p>Documents</p>
+            </div>
+          </div>
+
+          <div class="searchbox">
+            <div class="doctext">
+              <h1>My Documents</h1>
+              <button onclick="showPopup()" id="adddoc">Add Document</button>
+            </div>
+
+            <div class="searchbar">
+              <form>
+                <input
+                  class="search"
+                  type="text"
+                  name="search"
+                  placeholder="Search Documents.."
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="document-table" style="padding: 25px 50px 0 55px">
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th><input type="checkbox" id="selectall"/></th>
+                  <th>Document Name</th>
+                  <th>Status</th>
+                  <th>Last Modified</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- Popup Form -->
+      <div class="overlay">
+        <div class="popupform">
+          <form action="" enctype="multipart/form-data">
+            <label for="docName">Document Name:</label>
+            <input type="text" id="docName" name="docName" required />
+
+            <label for="fileUpload">Upload File:</label>
+            <input type="file" id="fileUpload" name="fileUpload" required />
+
+            <label for="status">Status:</label>
+            <select id="status" name="status">
+              <option value="Pending">Pending</option>
+              <option value="Completed">Completed</option>
+              <option value="Needs-Signing">Needs Signing</option>
+            </select>
+
+            <button type="button" id="submitbtn">Submit</button>
+            <button type="button" class="close-btn" onclick="closePopup()">
+              Close
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
