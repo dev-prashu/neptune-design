@@ -13,7 +13,11 @@ body {
   height: 100%;
   display: flex;
 }
-
+a {
+  text-decoration: none;
+  color: inherit;
+  /* display: flex; */
+}
 .navbar {
   width: 400px;
   height: 100vh;
@@ -57,7 +61,8 @@ body {
 
 .down_arrow {
   padding-top: 10px;
-  padding-left: 15px;
+  padding-left: 15 <img src= "assests/settings 1.png" alt= "settings" / >
+    <p>Settings</p>px;
   padding-right: 15px;
 }
 
@@ -86,13 +91,24 @@ body {
 .home-feature,
 .chat-feature,
 .help-feature,
-.settings-feature {
+.settings-feature,
+a {
   display: flex;
   flex-direction: row;
   padding: 10px;
   align-items: center;
   gap: 20px;
 }
+
+.home-feature:hover,
+.document-feature:hover,
+.chat-feature:hover,
+.help-feature:hover,
+.settings-feature:hover {
+  background-color: #f0f4f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .lower {
   padding-left: 20px;
   padding-bottom: 15px;
@@ -347,8 +363,8 @@ button.action-btn {
   transition: all 0.3s ease-in-out;
 }
 
-#delete-btn img{
-  padding-top:2px;
+#delete-btn img {
+  padding-top: 2px;
 }
 
 #delete-btn:hover {
