@@ -13,23 +13,62 @@ body {
   height: 100%;
   display: flex;
 }
-a{
+a {
   text-decoration: none;
-  color:inherit;
-  /* display: flex; */
+  color: inherit;
 }
+
 .navbar {
-  width: 400px;
+  width: 350px;
   height: 100vh;
   background: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
   font-family: "Spline Sans", sans-serif;
+  transition: width 0.4s ease-in-out;
+}
+
+.navbar.collapsed {
+  width: 80px;
+  background-color: white;
+}
+
+.navbar.collapsed .upper,
+.navbar.collapsed .lower {
+  display: none;
+}
+
+#sidetoggle {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+
+.toggle-btn {
+  width: 25px;
+  height: 25px;
+  padding-top: 30px;
+  padding-left: 25px;
+  cursor: pointer;
 }
 .upper {
   padding: 5px;
 }
+
+.neptune_logo {
+  padding-top: 30px;
+  padding-left: 25px;
+  display: flex;
+  gap: 80px;
+}
+
+#sidetoggle {
+  width: 25px;
+  height: 25px;
+}
+
 .profile {
   padding-top: 35px;
   padding-left: 25px;
@@ -90,7 +129,8 @@ a{
 .home-feature,
 .chat-feature,
 .help-feature,
-.settings-feature, a{
+.settings-feature,
+a {
   display: flex;
   flex-direction: row;
   padding: 10px;
@@ -103,12 +143,12 @@ a{
 .chat-feature:hover,
 .help-feature:hover,
 .settings-feature:hover {
-  background-color: #f0f4f8; 
+  background-color: #f0f4f8;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .lower {
-  padding-left: 20px;
+  padding-left: 30px;
   padding-bottom: 15px;
 }
 .phone-heading {
@@ -361,8 +401,8 @@ button.action-btn {
   transition: all 0.3s ease-in-out;
 }
 
-#delete-btn img{
-  padding-top:2px;
+#delete-btn img {
+  padding-top: 2px;
 }
 
 #delete-btn:hover {

@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const overlay = document.querySelector(".overlay");
   const popupform = document.querySelector(".popupform");
   const selectAll = document.querySelector("#selectall");
+  const sidenavbar=document.querySelector(".navbar");
+  const toggle_leftbtn=document.querySelector("#sidetoggle");
 
   showData(arr);
 
@@ -48,6 +50,25 @@ document.addEventListener("DOMContentLoaded", function () {
   searchInput.addEventListener("input", filterData);
 
   selectAll.addEventListener("change", toggleSelectAll);
+
+
+  toggle_leftbtn.addEventListener('click',()=>{
+    
+    sidenavbar.classList.toggle("collapsed");
+    toggle_rightbtn.style.display="block";
+    
+
+  })
+  const toggle_rightbtn = document.createElement("img");
+  toggle_rightbtn.classList.add("toggle-btn");
+  toggle_rightbtn.src = "assests/righttoggle.png";
+  toggle_rightbtn.style.display = "none";
+  sidenavbar.appendChild(toggle_rightbtn);
+
+  toggle_rightbtn.addEventListener('click',()=>{
+    sidenavbar.classList.toggle("collapsed");
+    toggle_rightbtn.style.display="none";
+  })
 
   function clearFields() {
     docNameInput.value = "";
@@ -178,5 +199,3 @@ document.addEventListener("DOMContentLoaded", function () {
   deleteButton.addEventListener("click", deleteSelectedRows);
   document.body.appendChild(deleteButton);
 });
-
-console.log("Hello");
